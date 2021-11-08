@@ -19,6 +19,7 @@
 * io module
     * create, read, write
 ### third-party package
+* pip install openpyxl
 * openpyxl: read/write Excel xlsx/xlsm/xltx/xltm files
     * excel_file = openpyxl.load_workbook("excelName.xls")
     * spreadsheetContent = excel_file["sheetName"]
@@ -26,6 +27,10 @@
 ```python=
 for rowIndex in range(2, spreadsheetContent.max_row + 1):
     cellValue = spreadsheetContent.cell(rowIndex, 4).value
+    
+for rowArrContent in spreadsheetContent:  #loop for the rows of a spreadsheet
+    for cell in rowArrContent:            #loop for the cells of one row
+        print(cell.value, end='   ')      #end='' means no line feed
 ```
 
 
