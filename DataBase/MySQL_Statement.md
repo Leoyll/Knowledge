@@ -25,3 +25,19 @@ select @var2 := id, @var3 := name from tb_example_table where age = 33;
 INSERT INTO tb_example_table2 (id, name, varSet, menuid)
 VALUES (@var2, @var3, @var1, @var4);
 ```
+
+## replace
+```
+update tb_example
+set  column1 = replace(@originalStr, @oldSubStr, @newSubStr)
+where xxx;
+#replace("a,b1,c2,b3", "b", "d") -> "a,d1,c2,d3"
+```
+
+## CONCAT
+```
+update tb_example
+set  column1 = CONCAT(@originalStr, @delimiter, @addSubStr)
+where xxx;
+#CONCAT("abc", ";", "def") -> "abc;def"
+```
