@@ -1,4 +1,4 @@
-## watch execuation 
+## watch execution time
 ```java
 import org.springframework.util.StopWatch;
 
