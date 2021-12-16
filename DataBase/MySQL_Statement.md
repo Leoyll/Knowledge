@@ -35,9 +35,17 @@ where xxx;
 ```
 
 ## CONCAT
+### concat multi-string with delimiter
 ```
 update tb_example
 set  column1 = CONCAT(@originalStr, @delimiter, @addSubStr)
 where xxx;
 #CONCAT("abc", ";", "def") -> "abc;def"
 ```
+### concat select rows
+```
+SELECT person_id, GROUP_CONCAT(hobbies SEPARATOR ', ')
+FROM peoples_hobbies
+GROUP BY person_id;
+```
+
