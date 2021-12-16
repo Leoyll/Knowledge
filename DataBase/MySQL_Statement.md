@@ -43,7 +43,7 @@ where xxx;
 #CONCAT("abc", ";", "def") -> "abc;def"
 ```
 ### concat select rows
-```
+```sql
 SELECT person_id, GROUP_CONCAT(hobbies SEPARATOR ', ')
 FROM peoples_hobbies
 GROUP BY person_id;
