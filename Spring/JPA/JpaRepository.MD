@@ -6,6 +6,8 @@ EntityManger控制实体在四个状态之间转换 <br>
 ![image](https://user-images.githubusercontent.com/54012569/148463832-4930db8e-27fc-418d-b090-753f46e31d86.png)
 ![image](https://user-images.githubusercontent.com/54012569/148463889-76030692-329e-4549-b9e7-84d2bd5eb6c0.png)
 
+## JPA SAVE vs saveAndFlush
+?? 在大多数情况下，我们将使用save()方法。但是有时，对于特定的用例，我们可能还需要使用saveAndFlush()方法 <br>
 ```java
 // org.springframework.data.jpa.repository.JpaRepository<T, ID extends java.io.Serializable> public abstract <S extends T> java.util.List<S> save(Iterable<S> entities)
 JpaRepository.save(list) 
