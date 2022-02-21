@@ -1,5 +1,5 @@
 ## findAll(Unknown Source)
-Root cause: the type of the new Field of the XXXEntity does NOT match with the data in DB.
+Root cause: the type of the new Field of the XXXEntity does NOT match with the data in DB. <br>
 For example, define Date type in XXXEntity and String in DB, which is a string in fact.
 
 ```java
