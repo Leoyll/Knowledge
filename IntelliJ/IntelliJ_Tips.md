@@ -10,7 +10,7 @@
 **Result**  
 <img src=https://i.imgur.com/rvp4hzg.png width=100%/>
 
-## Revert Selected Changes
+## Revert Selected Changes/Undo changes
 1. choose a commimtted git comment
 2. right click the changes
 3. Revert Selected changes
