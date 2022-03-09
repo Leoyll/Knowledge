@@ -47,3 +47,11 @@ FROM peoples_hobbies
 GROUP BY person_id;
 ```
 
+## SHOW
+```sql
+SHOW CREATE VIEW viewName;
+DESC tableName/viewName;
+SHOW TABLES;
+SHOW VIEWS; #not support in MYSQL
+```
+
