@@ -14,6 +14,11 @@ alter table tb_example add index index_userId(user_id);
 alter table tb_example drop index index_userId;
 ```
 
+## Excape Symbol
+```sql
+xxx where xxx like %\_SubStr\_%;    # filter the string which contains "_SubStr_"
+```
+
 ## set
 ```sql
 SET @var1 = 1;
