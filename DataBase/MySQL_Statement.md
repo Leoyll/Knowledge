@@ -13,8 +13,13 @@ alter table tb_example add index index_userId(user_id);
 ```sql
 alter table tb_example drop index index_userId;
 ```
+## Special Character
+https://dev.mysql.com/doc/refman/8.0/en/string-literals.html <br>
+![image](https://user-images.githubusercontent.com/54012569/157643912-ffd5164d-1773-474e-9c79-dbf02718f428.png)
+![image](https://user-images.githubusercontent.com/54012569/157644044-478b8275-b83f-41ab-a1fe-3089dc128b33.png)
+![image](https://user-images.githubusercontent.com/54012569/157644108-03876c65-6b1e-4404-803c-275805505abb.png)
 
-## Excape Symbol
+### Excape special character
 ```sql
 xxx where xxx like %\_SubStr\_%;    # filter the string which contains "_SubStr_"
 ```
