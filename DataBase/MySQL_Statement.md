@@ -23,6 +23,25 @@ https://dev.mysql.com/doc/refman/8.0/en/string-literals.html <br>
 ```sql
 xxx where xxx like %\_SubStr\_%;    # filter the string which contains "_SubStr_"
 ```
+## wildcard
+```sql
+SELECT * FROM members WHERE postal_address like '%code';
+SELECT * FROM members WHERE postal_address LIKE 'code%';
+SELECT * FROM members WHERE postal_address LIKE '%code%';
+SELECT * FROM members WHERE postal_address LIKE 'code_';
+SELECT * FROM members WHERE postal_address NOT LIKE 'code_';
+```
+### Escape keyword
+```sql
+SELECT * FROM members WHERE postal_address LIKE '67#%%' ESCAPE '#';     #check for the string “67%”
+SELECT * FROM members WHERE postal_address LIKE '67#%%' ESCAPE '#';     #search for the movie “67% Guilty”
+SELECT * FROM members WHERE postal_address LIKE '67=%%' ESCAPE '=';     #search for the movie “67% Guilty”
+```
+### _ underscore wildcard (for specific length)
+The underscore wildcard is used to match exactly one character. Two matches exactly two characters, and so on. <br>
+Let’s suppose that we want to search for all the movies that were released in the years 200x where x is exactly one character that could be any value. We would use the underscore wild card to achieve that. The script below select all the movies that were released in the year “200x”.<br>
+![image](https://user-images.githubusercontent.com/54012569/157644583-8991cbf0-5410-461e-a694-4f1785f28604.png)
+
 
 ## set
 ```sql
