@@ -11,7 +11,7 @@ ANALYZE TABLE tableName;  #MySQL uses the stored key distribution to decide the 
 1. OPTIMIZE TABLE  
    a) reorganizes the physical storage of table data and associated index data, to reduce storage space and improve I/O efficiency when accessing the table.<br>
    b) OPTIMIZE TABLE copies the data to a new tablespace, and rebuilds indexes. This takes a long time for a large table.<br>
-2. Analyze table 
+2. Analyze table <br>
    a) performs a key distribution analysis and stores the distribution for the named table or tables.<br>
    b) Analyze table doesn't take a long time, and doesn't take longer for a large table. <br>
    The way analyze table helps performance is that it updates statistics that the optimizer uses to choose indexes for a given query. <br>
