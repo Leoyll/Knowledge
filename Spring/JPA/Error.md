@@ -1,3 +1,10 @@
+## No found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency
+Normally, we use @Repository to define the interface xxxRepository and the bean can be created.
+However, the package name is written wrongly with "repositoty" other than "repository" and face the bean creation error.
+```java
+
+```
+
 ## findAll(Unknown Source)
 Root cause: the type of the new Field of the XXXEntity does NOT match with the data in DB. <br>
 For example, define Date type in XXXEntity and String in DB, which is a string in fact.
