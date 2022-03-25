@@ -1,3 +1,7 @@
+## deep clone
+![image](https://user-images.githubusercontent.com/54012569/160037649-677b7fa9-7620-48df-9d1f-892aebe7e630.png) <br>
+对于数据类型是引用数据类型的成员变量，比如说成员变量是某个数组、某个类的对象等，那么浅拷贝会将该成员变量的引用值（内存地址）复制一份给新的对象。因为实际上两个对象的该成员变量都指向同一个实例。在这种情况下，在一个对象中修改该成员变量会影响到另一个对象的该成员变量值。
+
 ## JPA EntityManager
 四个主要方法 ——persist,merge,refresh和remove
 
@@ -16,7 +20,7 @@ JpaRepository.save(list)
 // ??save方法会预检查该entity是否持久化，isNew会判断该对象的Id类型 是否实现Persistable或EntityInformation进行重写isNew方法，如果Id是Number类型，直接判断value==0 true 执行entityManager.persist 否则执行entityManager.merge()
 ```
 ## 
-···java
+```java
 package org.springframework.data.domain;
 
 // public PageRequest(int page, int size, org.springframework.data.domain.Sort sort)
@@ -29,5 +33,6 @@ while (xxxEntityPage.hasContent()) {
               //比如(1)和(2)查询status为0的数据，(3)将本次查询到记录的status设为1，此时的(2)跟之前的(2)的结果是有变化的，则不能再depositRequest=pageRequest.next()
     xxxEntityPage = xxxRepository.findAllxxx(pageRequest, ...);                 // (2)
 }
-
 ```
+    
+
