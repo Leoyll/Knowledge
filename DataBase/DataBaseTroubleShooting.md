@@ -1,3 +1,19 @@
+## index is not used
+```sql
+SET @deleteDate = '2021-11-22';    #修改
+ 
+#delete from tb_commission_ib_transaction where commission_ib_id in (select id from tb_commission_ib where close_time >@deleteDate);
+
+# If the number of rows of tb_commission_ib_volume is huge, and the SQL is pretty slow.
+
+delete tcit.*
+from tb_commission_ib_transaction tcit
+join tb_commission_ib tci on tci.id=tcit.commission_ib_id
+where tci.close_time > @deleteDate;
+
+# It will use index_close_time of tci and commission_ib_id_index of tciv
+```
+
 ## index
 If the correct index is created, but SQL query does call the correct index.
 ```sql
