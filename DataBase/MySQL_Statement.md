@@ -1,5 +1,12 @@
 # MySQL_knowledge
 
+## Trace SQL statement
+```sql
+# enable trace
+set session optimizer_trace=”enabled=on”, end_markers_in_json=on;
+# SQL statement
+```
+
 ## index
 ### show index
 ```sql
