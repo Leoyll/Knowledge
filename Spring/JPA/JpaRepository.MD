@@ -34,7 +34,7 @@ while (xxxEntityPage.hasContent()) {
     xxxEntityPage = xxxRepository.findAllxxx(pageRequest, ...);                 // (2)
 }
 ```
-## 多表关联的save and delete
+## 多表关联的Entity的save and delete
 ```java
 // PaymentSourceEntity with @OneToOne for PaymentSourceVerificationLogEntity
 // 对应 PaymentSourceRepository.SAVE(PaymentSourceEntity) 会报错，原因是PaymentSourceEntity对象的save没有commit，PaymentSourceVerificationLogEntity无法save
