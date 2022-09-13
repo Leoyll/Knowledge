@@ -98,3 +98,10 @@ DESC tableName/viewName;
 show create table tableName;
   ![image](https://user-images.githubusercontent.com/54012569/190027888-78ff40e1-6507-47d1-b062-cece8ff9f078.png)
 
+## SELECT - bit type column
+```sql
+select bin(is_del) from tableName;
+```
+![image](https://user-images.githubusercontent.com/54012569/190028177-a5ee32d6-2e9a-4114-860a-146ff5807426.png)
+![image](https://user-images.githubusercontent.com/54012569/190028332-49fc8619-d1b5-4580-a837-48c88243637f.png)
+
