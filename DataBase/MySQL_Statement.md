@@ -87,6 +87,10 @@ GROUP BY person_id;
 ```sql
 SHOW CREATE VIEW viewName;
 DESC tableName/viewName;
+  ![image](https://user-images.githubusercontent.com/54012569/190027772-c27024cc-ccd1-4d7d-9671-bdde3bba6c70.png)
+show create table tableName;
+  ![image](https://user-images.githubusercontent.com/54012569/190027888-78ff40e1-6507-47d1-b062-cece8ff9f078.png)
+
 SHOW TABLES;
 SHOW VIEWS; #not support in MYSQL
 ```
