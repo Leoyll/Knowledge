@@ -15,3 +15,13 @@ java -Xms750m -Xmx750m -Xmn512m -Xss1024k -XX:CMSFullGCsBeforeCompaction=5 -XX:+
 -XX:+HeapDumpOnOutOfMemoryError 设置当首次遭遇内存溢出时导出此时堆中相关信息
 -XX:HeapDumpPath=/tmp/heapdump.hprof 指定导出堆信息时的路径或文件名
 ```
+
+## 获取JVM启动参数
+```java
+//  -DalphaName=local
+System.getProperty("alphaName");
+
+ManagementFactory.getRuntimeMXBean().getInputArguments();
+```
+![image](https://user-images.githubusercontent.com/54012569/192170329-868fb993-d1db-4ed3-8feb-e8244fd5efbb.png)
+
