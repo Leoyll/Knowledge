@@ -6,6 +6,18 @@
 * 不属于某一个数据库的接口，而是可以用于定义程序与数据库连接规范，通过一整套接口，由各个不同的数据库厂商去完成所对应的实现类，由sun公司提出
 * 执行sql过程为：类加载-->获取连接-->书写SQL-->执行语句--->处理结果集
 
+
+## Connect to Database from Linux Server
+```sql
+# connect
+mysql -h hostAddress -u userName -p password
+# or
+mysql -h hostAddress -u userName -p
+
+# exit
+exit
+```
+
 ## 连接池
 * 因为建立数据库连接是一个非常耗时、耗资源的行为，所以通过连接池预先同数据库建立一些连接，放在内存中，应用程序需要建立数据库连接时直接到连接池中申请一个就行，用完后再放回去，极大的提高了数据库连接的性能问题，节省了资源和时间。
 
@@ -59,13 +71,3 @@ Output:
 com.alibaba.druid.filter.config.ConfigTools public static String decrypt(String publicKeyText, String cipherText)
 ```
 
-## Connect to Database from Linux Server
-```sql
-# connect
-mysql -h hostAddress -u userName -p password
-# or
-mysql -h hostAddress -u userName -p
-
-# exit
-exit
-```
