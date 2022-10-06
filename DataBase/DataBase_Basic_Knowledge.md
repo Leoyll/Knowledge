@@ -39,6 +39,7 @@ https://www.cnblogs.com/knowledgesea/p/11202918.html
 **note**：上面有个小插曲就是根据druid生成密码，命令：
 ```java=
 D:\Maven\repository\com\alibaba\druid\1.1.5> java -cp .\druid-1.1.5.jar  com.alibaba.druid.filter.config.ConfigTools 密码
+# If there is `&` in the password, there will be something wrong when using the encrypted pwd.
 
 Output:
     privateKey: xxx
@@ -56,4 +57,9 @@ Output:
 ```java=
 // Maven: com.alibaba:druid:1.0.26
 com.alibaba.druid.filter.config.ConfigTools public static String decrypt(String publicKeyText, String cipherText)
+```
+
+## Connect to Database from Linux Server
+```sql
+mysql -h hostAddress -u userName -p password
 ```
