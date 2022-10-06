@@ -61,5 +61,11 @@ com.alibaba.druid.filter.config.ConfigTools public static String decrypt(String 
 
 ## Connect to Database from Linux Server
 ```sql
+# connect
 mysql -h hostAddress -u userName -p password
+# or
+mysql -h hostAddress -u userName -p
+
+# exit
+exit
 ```
