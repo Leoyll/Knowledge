@@ -22,5 +22,3 @@ Commands: -DskipTests VS -Dmaven.test.skip=true
   [...]
 </project>
 ```
-
-test
