@@ -1,5 +1,12 @@
 # VS Code - Tips
 
+## Git push steps
+```
+1. staged
+2. commit with words, which should not be blank.
+3. sync or push
+```
+
 ## Wrap according to the window
 1. File -> Preference -> Settings
 2. Input: editor.wordWrap
