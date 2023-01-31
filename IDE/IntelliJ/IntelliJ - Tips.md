@@ -6,3 +6,6 @@ C:\Users\<USER_DIR>\.gitconfig
     name = <USERNAME>
     email = <EMAIL>
 ```
+
+```text
+```
