@@ -1,4 +1,5 @@
 ## index is not used
+
 ```sql
 SET @deleteDate = '2021-11-22';    #修改
  
@@ -15,7 +16,9 @@ where tci.close_time > @deleteDate;
 ```
 
 ## index
+
 If the correct index is created, but SQL query does call the correct index.
+
 ```sql
 explain tableName;  #show the table index
 explain SQL query;  #show the index usage for the query
@@ -23,8 +26,10 @@ ANALYZE TABLE tableName;  #MySQL uses the stored key distribution to decide the 
                           #In addition, key distributions can be used when deciding which indexes to use for a specific table within a query.
                           #Use it can improve performance.
 ```
-### ANALYZE TABLE vs OPTIMIZE TABLE 
-1. OPTIMIZE TABLE  
+
+### ANALYZE TABLE vs OPTIMIZE TABLE
+
+1. OPTIMIZE TABLE
    a) reorganizes the physical storage of table data and associated index data, to reduce storage space and improve I/O efficiency when accessing the table.<br>
    b) OPTIMIZE TABLE copies the data to a new tablespace, and rebuilds indexes. This takes a long time for a large table.<br>
 2. Analyze table <br>
@@ -33,3 +38,9 @@ ANALYZE TABLE tableName;  #MySQL uses the stored key distribution to decide the 
    The way analyze table helps performance is that it updates statistics that the optimizer uses to choose indexes for a given query. <br>
    If the updated statistics don't make any material difference to the choice of index, it won't have any effect on performance. <br>
    It only matters if the new statistics would result in the optimizer choosing a more favorable index.<br>
+3. eq_range_index_dive_limit <br>
+   In both cases, the expression contains N equality ranges. The optimizer can make row estimates using index dives or index statistics. 
+   If eq_range_index_dive_limit is greater than 0, the optimizer uses existing index statistics instead of index dives if there are eq_range_index_dive_limit or more equality ranges. 
+      Thus, to permit use of index dives for up to N equality ranges, set eq_range_index_dive_limit to N + 1. 
+   To disable use of index statistics and always use index dives regardless of N, set eq_range_index_dive_limit to 0.
+   Reference: https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html
