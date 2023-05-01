@@ -139,6 +139,23 @@ select bin(is_del) from tableName;
   select * from `db_name`.`table_name`;
 ```
 
+### create procedure
+
+```sql
+  create procedure xxDB.procedureExample(in userId int)
+  begin
+    xxx
+    select @varExample1 := count(1) from xxxx;
+    if @varExample1 xxx then xxxx
+    end if;
+  end;
+  
+  call xxDB.procedureExample(numExample1);
+  call xxDB.procedureExample(numExample2);
+  
+  drop procedure if exists xxDB.procedureExample;
+```
+
 The view definition is “**frozen**” at creation time and is not affected by subsequent changes to the definitions of the underlying tables. <br>
 For example, if a view is defined as SELECT * on a table, new columns added to the table later do not become part of the view,
 and columns dropped from the table result in an error when selecting from the view.
